@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="stul_100">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="stul_100_collision">
+		<collision name="stul_100_collision">
+		<geometry>
+			<mesh>
+				<uri>model://stul_100/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="stul_100_mesh">
+		<geometry>
+			<mesh>
+				<uri> model://stul_100/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
+			</mesh>
+		</geometry>
+	</visual>
+</link>
+</model>
+</sdf>
