@@ -19,6 +19,14 @@
 				<scale>0.001 0.001 0.001</scale>
 			</mesh>
 		</geometry>
+<!--			<material>
+		<script>
+			<uri> model://stul_l_pravy/material/scripts</uri>
+			<uri> model://stul_l_pravy/material/textures</uri>
+			<name>stul</name>
+		</script>
+		</material> -->
+		
 	</visual>
 </link>
 </model>

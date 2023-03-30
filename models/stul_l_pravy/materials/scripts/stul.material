@@ -1,0 +1,13 @@
+material stul
+{
+	technique
+	{
+		pass
+			{
+			 texture_unit
+			 	{ 
+				 texture stul.png
+				 }
+			}
+	}
+}
