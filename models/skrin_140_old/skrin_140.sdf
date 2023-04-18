@@ -7,26 +7,18 @@
 		<collision name="skrin_140_collision">
 		<geometry>
 			<mesh>
-				<uri>model://skrin_140/meshes/model.dae</uri>
-				
+				<uri>model://skrin_140/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
 			</mesh>
 		</geometry>
 		</collision>
 	<visual name="skrin_140_mesh">
-		<cast_shadows>false</cast_shadows>
 		<geometry>
 			<mesh>
-				<uri> model://skrin_140/meshes/model.dae</uri>
-				
+				<uri> model://skrin_140/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
 			</mesh>
 		</geometry>
-		<material>
-		<script>
-			<uri> model://skrin_140/material/scripts</uri>
-			<uri> model://skrin_140/material/textures</uri>
-			<name>skrin_140/Diffuse</name>
-		</script>
-		</material>
 	</visual>
 </link>
 </model>

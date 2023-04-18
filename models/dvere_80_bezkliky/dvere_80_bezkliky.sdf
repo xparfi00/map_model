@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="dvere_80_bezkliky">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="dvere_80_bezkliky_collision">
+		<collision name="dvere_80_bezkliky_collision">
+		<geometry>
+			<mesh>
+				<uri>model://dvere_80_bezkliky/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="dvere_80_bezkliky_mesh">
+		<geometry>
+			<mesh>
+				<uri> model://dvere_80_bezkliky/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
+			</mesh>
+		</geometry>
+	</visual>
+</link>
+</model>
+</sdf>

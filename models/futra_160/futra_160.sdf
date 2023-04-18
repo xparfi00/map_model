@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="futra_160">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="futra_160_collision">
+		<collision name="futra_160_collision">
+		<geometry>
+			<mesh>
+				<uri>model://futra_160/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="futra_160_mesh">
+		<geometry>
+			<mesh>
+				<uri> model://futra_160/meshes/model.stl</uri>
+				<scale>0.001 0.001 0.001</scale>
+			</mesh>
+		</geometry>
+	</visual>
+</link>
+</model>
+</sdf>
