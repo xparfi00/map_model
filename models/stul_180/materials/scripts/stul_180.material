@@ -10,7 +10,7 @@ material stul_180/Diffuse
 				specular 0.03 0.03 0.03 1.000000
 			 texture_unit
 			 	{ 
-				 texture Stul_180colormap.png
+				 texture Stul_180_colormap.png
 				 }
 			}
 	}

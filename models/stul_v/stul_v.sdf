@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="stul_v">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="stul_v_collision">
+		<collision name="stul_v_collision">
+		<geometry>
+			<mesh>
+				<uri>model://stul_v/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="stul_v_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://stul_v/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://stul_v/material/scripts</uri>
+			<uri> model://stul_v/material/textures</uri>
+			<name>stul_v/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

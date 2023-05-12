@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+<model name="stolecek_maly">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="stolecek_maly_collision">
+		<collision name="stolecek_maly_collision">
+		<geometry>
+			<mesh>
+				<uri>model://stolecek_maly/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="stolecek_maly_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://stolecek_maly/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://stolecek_maly/material/scripts</uri>
+			<uri> model://stolecek_maly/material/textures</uri>
+			<name>stolecek_maly/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

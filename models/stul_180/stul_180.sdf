@@ -13,7 +13,7 @@
 		</geometry>
 		</collision>
 	<visual name="stul_180_mesh">
-		<cast_shadows>false</cast_shadows>
+	<cast_shadows>false</cast_shadows>
 		<geometry>
 			<mesh>
 				<uri> model://stul_180/meshes/model.dae</uri>
@@ -27,6 +27,7 @@
 			<name>stul_180/Diffuse</name>
 		</script>
 		</material>
+		
 	</visual>
 </link>
 </model>

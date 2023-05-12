@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+<model name="skrin_90">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="skrin_90_collision">
+		<collision name="skrin_90_collision">
+		<geometry>
+			<mesh>
+				<uri>model://skrin_90/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="skrin_90_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://skrin_90/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://skrin_90/material/scripts</uri>
+			<uri> model://skrin_90/material/textures</uri>
+			<name>skrin_90/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

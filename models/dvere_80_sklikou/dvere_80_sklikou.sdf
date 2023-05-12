@@ -7,18 +7,26 @@
 		<collision name="dvere_80_sklikou_collision">
 		<geometry>
 			<mesh>
-				<uri>model://dvere_80_sklikou/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri>model://dvere_80_sklikou/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
 		</collision>
-	<visual name="dvere_80_sklikou_mesh">
+	<visual name="dvere_80_sklikou">
+		<cast_shadows>false</cast_shadows>
 		<geometry>
 			<mesh>
-				<uri> model://dvere_80_sklikou/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri> model://dvere_80_sklikou/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
+		<material>
+		<script>
+			<uri> model://dvere_80_sklikou/material/scripts</uri>
+			<uri> model://dvere_80_sklikou/material/textures</uri>
+			<name>dvere_80_sklikou/Diffuse</name>
+		</script>
+		</material>
 	</visual>
 </link>
 </model>

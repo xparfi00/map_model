@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="okna_s_dvermi">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="okna_s_dvermi_collision">
+		<collision name="okna_s_dvermi_collision">
+		<geometry>
+			<mesh>
+				<uri>model://okna_s_dvermi/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="okna_s_dvermi_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://okna_s_dvermi/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://okna_s_dvermi/material/scripts</uri>
+			<uri> model://okna_s_dvermi/material/textures</uri>
+			<name>okna_s_dvermi/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

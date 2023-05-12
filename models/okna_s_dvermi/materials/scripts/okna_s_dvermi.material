@@ -1,0 +1,18 @@
+material okna_s_dvermi/Diffuse
+{
+	recive_shadows off
+	technique
+	{
+		pass
+			{
+				ambient 1 1 1 1.000000
+				diffuse 1 1 1 1.000000
+				specular 0.03 0.03 0.03 1.000000
+			 texture_unit
+			 	{ 
+				 texture okna_s_dvermi_colormap.png
+				 }
+			}
+	}
+}
+

@@ -7,25 +7,26 @@
 		<collision name="stul_l_pravy_collision">
 		<geometry>
 			<mesh>
-				<uri>model://stul_l_pravy/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri>model://stul_l_pravy/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
 		</collision>
 	<visual name="stul_l_pravy_mesh">
+	<cast_shadows>false</cast_shadows>
 		<geometry>
 			<mesh>
-				<uri> model://stul_l_pravy/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri> model://stul_l_pravy/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
-<!--			<material>
+		<material>
 		<script>
 			<uri> model://stul_l_pravy/material/scripts</uri>
 			<uri> model://stul_l_pravy/material/textures</uri>
-			<name>stul</name>
+			<name>stul_l_pravy/Diffuse</name>
 		</script>
-		</material> -->
+		</material>
 		
 	</visual>
 </link>

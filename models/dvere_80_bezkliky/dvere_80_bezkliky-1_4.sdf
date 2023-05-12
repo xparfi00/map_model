@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+<model name="dvere_80_bezkliky">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="dvere_80_bezkliky_collision">
+		<collision name="dvere_80_bezkliky_collision">
+		<geometry>
+			<mesh>
+				<uri>model://dvere_80_bezkliky/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="dvere_80_bezkliky_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://dvere_80_bezkliky/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://dvere_80_bezkliky/material/scripts</uri>
+			<uri> model://dvere_80_bezkliky/material/textures</uri>
+			<name>dvere_80_bezkliky/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

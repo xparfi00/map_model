@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+<model name="stul_120">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="stul_120_collision">
+		<collision name="stul_120_collision">
+		<geometry>
+			<mesh>
+				<uri>model://stul_120/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="stul_120_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://stul_120/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://stul_120/material/scripts</uri>
+			<uri> model://stul_120/material/textures</uri>
+			<name>stul_120/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

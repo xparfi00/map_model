@@ -7,18 +7,26 @@
 		<collision name="futra_160_collision">
 		<geometry>
 			<mesh>
-				<uri>model://futra_160/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri>model://futra_160/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
 		</collision>
-	<visual name="futra_160_mesh">
+	<visual name="futra_160">
+		<cast_shadows>false</cast_shadows>
 		<geometry>
 			<mesh>
-				<uri> model://futra_160/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri> model://futra_160/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
+		<material>
+		<script>
+			<uri> model://futra_160/material/scripts</uri>
+			<uri> model://futra_160/material/textures</uri>
+			<name>futra_160/Diffuse</name>
+		</script>
+		</material>
 	</visual>
 </link>
 </model>

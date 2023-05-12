@@ -2,6 +2,22 @@
   <world name='default'>
   
   <light name='sun' type='directional'>
+      <cast_shadows>0</cast_shadows>
+      <pose frame=''>0 0 5 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+  
+  
+  
+  <!-- <light name='sun' type='directional'>
       <pose frame=''>0 0 1000 0.4 0.2 0</pose>
       <diffuse>1 1 1 1</diffuse>
       <specular>0.6 0.6 0.6 1</specular>
@@ -12,8 +28,8 @@
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
       </attenuation>
-      <cast_shadows>1</cast_shadows>
-    </light>
+      <cast_shadows>0</cast_shadows>
+    </light>  -->
 
     <scene>
       <shadows>false</shadows>
@@ -23,54 +39,13 @@
     </scene>
     
     
-        <model name='ground_plane'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>100</mu>
-                <mu2>50</mu2>
-              </ode>
-            </friction>
-            <bounce/>
-            <contact>
-              <ode/>
-            </contact>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Yellow</name>
-            </script>
-          </material>
-        </visual>
-        <velocity_decay>
-          <linear>0</linear>
-          <angular>0</angular>
-        </velocity_decay>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-    </model>
+  <include>
+      <uri>model://my_ground_plane</uri>
+      <name>podlaha</name>
+      <pose>0.5 0.5 0 0 0 </pose>
+    </include>
+    
+    
  
  
  
@@ -122,7 +97,13 @@
       <uri>model://stul_180</uri>
       <name>stul_180_SE_1_112_1</name>
       <pose>2 2.9 0 0 0 1.57</pose>
-    </include> 				
+    </include> 
+    				
+    <include>
+      <uri>model://stul_160</uri>
+      <name>stul_160_SE_1_112_1</name>
+      <pose>1.8 -1 0 0 0 </pose>
+    </include> 
     
     <include>
       <uri>model://stul_l_pravy</uri>
@@ -153,7 +134,7 @@
  
      <include>
       <uri>model://skrin_140</uri>
-      <pose>-1.2 2.5 0 0 0 0</pose>
+      <pose>-1.2 2.5 0 0 0 1.57</pose>
     </include>
     		
      <include>
@@ -164,12 +145,17 @@
     <include>
       <uri>model://dvere_80_sklikou</uri>
       <name>dvere_sklikou_112_1</name>
-      <pose>2.92 3.91 0 0 0 </pose>
+      <pose>2.92 3.99 0 0 0 </pose>
     </include>
     <include>
       <uri>model://dvere_80_bezkliky</uri>
       <name>dvere_bezkliky_112_1</name>
-      <pose>3.72 3.91 0 0 0 0</pose>
+      <pose>3.72 3.99 0 0 0 0</pose>
+    </include>
+     <include>
+      <uri>model://okna</uri>
+      <name>okna_mistnost1</name>
+      <pose>-1.16 -3.01 1.18 0 0 0</pose>
     </include>
     
     
@@ -193,12 +179,12 @@
     <include>
       <uri>model://dvere_80_sklikou</uri>
       <name>dvere_sklikou_mistnost2</name>
-      <pose>3.72 5.86 0 0 0 3.14</pose>
+      <pose>3.72 5.78 0 0 0 3.14</pose>
     </include>
     <include>
       <uri>model://dvere_80_bezkliky</uri>
       <name>dvere_bezkliky_mistnost2</name>
-      <pose>2.92 5.86 0 0 0 3.14</pose>
+      <pose>2.92 5.78 0 0 0 3.14</pose>
     </include>
     
      <include>
@@ -209,7 +195,13 @@
     
     <include>
       <uri>model://stul_120</uri>
-      <name>stul_120_mistnost2</name>
+      <name>stul_120_mistnost2_1</name>
+      <pose>1.35 16.5 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://stul_120</uri>
+      <name>stul_120_mistnost2_2</name>
       <pose>4.15 16.5 0 0 0 0</pose>
     </include> 	
     
@@ -256,10 +248,65 @@
       <pose> 1.15 10.4 0 0 0 3.14</pose>
     </include>
     
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>5.4 11 0 0 0 -1.57</pose>
+      <name>skrin_90_mistnost2_1</name>
+    </include>
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>5.4 11.9 0 0 0 -1.57</pose>
+      <name>skrin_90_mistnost2_2</name>
+    </include>
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>5.4 12.8 0 0 0 -1.57</pose>
+      <name>skrin_90_mistnost2_3</name>
+    </include>
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>5.4 13.7 0 0 0 -1.57</pose>
+      <name>skrin_90_mistnost2_4</name>
+    </include>
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>5.4 14.6 0 0 0 -1.57</pose>
+      <name>skrin_90_mistnost2_5</name>
+    </include>
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>5.4 15.5 0 0 0 -1.57</pose>
+      <name>skrin_90_mistnost2_6</name>
+    </include>
+    <include>
+      <uri>model://skrin_90</uri>
+      <pose>0.8 6.448 0 0 0 1.57</pose>
+      <name>skrin_90_mistnost2_7</name>
+    </include>
     
+    <include>
+      <uri>model://stolecek_maly</uri>
+      <pose>5.65 7.9 0 0 0 1.57</pose>
+      <name>stolecek_maly_mistnost2_1</name>
+    </include>
     
+    <include>
+      <uri>model://okna_s_dvermi</uri>
+      <pose>-1.2 16.95 -0.025 0 0 0</pose>
+      <name>okna_s_dvermi_mistnost2</name>
+    </include>
     
+    <include>
+      <uri>model://sofa_set_2</uri>
+      <pose>-1.2 16.95 -0.025 0 0 0</pose>
+      <name>sofa_set_2</name>
+    </include>
     
+    <include>
+      <uri>model://chair_1</uri>
+      <pose>-1.2 16.95 -0.025 0 0 0</pose>
+      <name>chair_1</name>
+    </include>
     
       <!-- mistnost 3 -->
     
@@ -271,12 +318,12 @@
     <include>
       <uri>model://dvere_80_sklikou</uri>
       <name>dvere_sklikou_mistnost3</name>
-      <pose>-7.18 3.91 0 0 0 </pose>
+      <pose>-7.18 3.99 0 0 0 </pose>
     </include>
     <include>
       <uri>model://dvere_80_bezkliky</uri>
       <name>dvere_bezkliky_mistnost3</name>
-      <pose>-6.38 3.91 0 0 0 0</pose>
+      <pose>-6.38 3.99 0 0 0 0</pose>
     </include>
     
          <include>
@@ -300,24 +347,24 @@
     <include>
       <uri>model://stul_l_levy</uri>
       <name>stul_l_levy_mistnost3_1</name>
-      <pose>-8.06 -1.45 0 0 0 -1.57</pose>
+      <pose>-5.35 -1.45 0 0 0 -1.57</pose>
     </include>
     
      <include>
-      <uri>model://stul_l_levy</uri>
-      <name>stul_l_levy_mistnost3_2</name>
-      <pose>-4.75 -1.45 0 0 0 -1.57</pose>
+      <uri>model://stul_v</uri>
+      <name>stul_v_mistnost3_1</name>
+      <pose>-6.41 -0.9 0 0 0 3.14</pose>
     </include>
     
       <include>
       <uri>model://stul_100</uri>
       <name>stul_100_mistnost3_1</name>
-      <pose> -3.6 -2.2 0 0 0 3.14</pose>
+      <pose> -4.2 -2.2 0 0 0 3.14</pose>
     </include> 
     
       <include>
-      <uri>model://stul_l_pravy</uri>
-      <name>stul_l_pravy_mistnost3_1</name>
+      <uri>model://stul_v</uri>
+      <name>stul_v_mistnost3_2</name>
       <pose>-3.1 -0.3 0 0 0 -1.57</pose>
     </include>
     
@@ -337,7 +384,190 @@
       <uri>model://skrin_90_low</uri>
       <name>skrin_90_low_mistnost3_3</name>
       <pose>-2.12 1.91 0 0 0 -1.57</pose>
-    </include>				
+    </include>	
+    <include>
+      <uri>model://skrin_90</uri>
+      <name>skrin_90_mistnost3_1</name>
+      <pose>-3.12 3.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://skrin_140</uri>
+      <name>skrin_140_mistnost3_1</name>
+      <pose>-4.27 3.5 0 0 0 0</pose>
+    </include>	
+    <include>
+      <uri>model://okna</uri>
+      <name>okna_mistnost3</name>
+      <pose>-8.57 -3.01 1.18 0 0 0</pose>
+    </include>
+    
+    
+    <!-- chodba -->
+    
+    <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_1</name>
+      <pose>-21 3.91 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_1</name>
+      <pose>-21.4 3.99 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_1</name>
+      <pose>-20.6 3.99 0 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_2</name>
+      <pose>-23.795 4.88 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_2</name>
+      <pose>-23.72 5.28 0 0 0 -1.57</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_2</name>
+      <pose>-23.72 4.48 0 0 0 -1.57</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_3</name>
+      <pose>7.65 3.91 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_3</name>
+      <pose>7.25 3.99 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_3</name>
+      <pose>8.05 3.99 0 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_4</name>
+      <pose>11.3 3.91 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_4</name>
+      <pose>10.9 3.99 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_4</name>
+      <pose>11.7 3.99 0 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_5</name>
+      <pose>14.6 3.91 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_5</name>
+      <pose>14.2 3.99 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_5</name>
+      <pose>15 3.99 0 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_6</name>
+      <pose>18.4 3.91 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_6</name>
+      <pose>18 3.99 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_6</name>
+      <pose>18.8 3.99 0 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_7</name>
+      <pose>18.4 5.81 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_7</name>
+      <pose>18 5.72 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_7</name>
+      <pose>18.8 5.72 0 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_8</name>
+      <pose>-6.795 5.81 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_8</name>
+      <pose>-7.18 5.72 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_8</name>
+      <pose>-6.38 5.72 0 0 0</pose>
+    </include>
+    
+      <include>
+      <uri>model://futra_160</uri>
+      <name>futra_chodba_9</name>
+      <pose>11.3 5.81 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_sklikou</uri>
+      <name>dvere_sklikou_chodba_9</name>
+      <pose>10.9 5.72 0 0 0 </pose>
+    </include>
+    <include>
+      <uri>model://dvere_80_bezkliky</uri>
+      <name>dvere_bezkliky_chodba_9</name>
+      <pose>11.7 5.72 0 0 0 0</pose>
+    </include>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

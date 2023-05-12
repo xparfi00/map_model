@@ -7,18 +7,27 @@
 		<collision name="stul_80_collision">
 		<geometry>
 			<mesh>
-				<uri>model://stul_80/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri>model://stul_80/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
 		</collision>
 	<visual name="stul_80_mesh">
+	<cast_shadows>false</cast_shadows>
 		<geometry>
 			<mesh>
-				<uri> model://stul_80/meshes/model.stl</uri>
-				<scale>0.001 0.001 0.001</scale>
+				<uri> model://stul_80/meshes/model.dae</uri>
+				
 			</mesh>
 		</geometry>
+		<material>
+		<script>
+			<uri> model://stul_80/material/scripts</uri>
+			<uri> model://stul_80/material/textures</uri>
+			<name>stul_80/Diffuse</name>
+		</script>
+		</material>
+		
 	</visual>
 </link>
 </model>
