@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+<model name="futra_70">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="futra_70_collision">
+		<collision name="futra_70_collision">
+		<geometry>
+			<mesh>
+				<uri>model://futra_70/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="futra_70_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://futra_70/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://futra_70/material/scripts</uri>
+			<uri> model://futra_70/material/textures</uri>
+			<name>futra_70/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>

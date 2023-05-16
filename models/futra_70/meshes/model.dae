@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.5.0 commit date:2023-03-29, commit time:02:56, hash:1be25cfff18b</authoring_tool>
+    </contributor>
+    <created>2023-05-02T15:58:10</created>
+    <modified>2023-05-02T15:58:10</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material_001-effect">
+      <profile_COMMON>
+        <newparam sid="futra_70_colormap_png-surface">
+          <surface type="2D">
+            <init_from>futra_70_colormap_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="futra_70_colormap_png-sampler">
+          <sampler2D>
+            <source>futra_70_colormap_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="futra_70_colormap_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="futra_70_colormap_png" name="futra_70_colormap_png">
+      <init_from>futra_70_colormap.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material_001-material" name="Material.001">
+      <instance_effect url="#Material_001-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="futra_70-mesh" name="futra_70">
+      <mesh>
+        <source id="futra_70-mesh-positions">
+          <float_array id="futra_70-mesh-positions-array" count="48">-0.35 -0.07499998 2.1 -0.35 -0.07499998 0 -0.35 0.07499998 2.1 -0.35 0.07499998 0 0.35 -0.07499998 2.1 0.35 0.07499998 2.1 0.35 -0.07499998 0 0.35 0.07499998 0 0.4 -0.07499998 0 0.4 0.07499998 0 0.4 -0.07499998 2.15 0.4 0.07499998 2.15 -0.4 -0.07499998 2.15 -0.4 0.07499998 2.15 -0.4 -0.07499998 0 -0.4 0.07499998 0</float_array>
+          <technique_common>
+            <accessor source="#futra_70-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="futra_70-mesh-normals">
+          <float_array id="futra_70-mesh-normals-array" count="27">0 0 1 0 0 -1 1 0 0 0 1 0 0 0 -1 -1 0 0 0 -1 0 0 1 2.12874e-7 0 -1 2.12874e-7</float_array>
+          <technique_common>
+            <accessor source="#futra_70-mesh-normals-array" count="9" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="futra_70-mesh-map-0">
+          <float_array id="futra_70-mesh-map-0-array" count="168">1 0 0.9361702 0.3404254 0.9361702 0 0.8085107 0.8936167 0.8297872 0.9574465 0.8085107 0.9574464 0.9361703 0 0.8723405 0.8936167 0.8723405 0 0.6808509 0.9148933 0.3404254 0.9148933 0.6595743 0.8936167 1 0.3404254 0.9361702 0.6382976 0.9361702 0.3404254 0.9361702 0.6382976 0.9574468 0.7021273 0.9361702 0.7021273 0.8085106 0.8936167 0.8723405 0 0.8723404 0.8936167 0.6808509 0.9148932 0.7446808 0 0.7446807 0.9148932 0.3404254 0.9148933 0 0.9148933 0.3191488 0.8936167 0.8085106 0 0.7446808 0.9148932 0.7446808 0 1 0 1 0.3404254 0.9361702 0.3404254 0.8085107 0.8936167 0.8297872 0.8936167 0.8297872 0.9574465 0.9361703 0 0.9361702 0.8936167 0.8723405 0.8936167 0.3404254 0.9148933 0.3404256 0 0.361702 0.8936167 0.3404256 0 0.3617021 0 0.361702 0.8936167 0.6595743 0 0.6808509 0 0.6595743 0.8936167 0.6808509 0 0.6808509 0.9148933 0.6595743 0.8936167 0.3404254 0.9148933 0.361702 0.8936167 0.6595743 0.8936167 1 0.3404254 1 0.6382976 0.9361702 0.6382976 0.9361702 0.6382976 0.9574468 0.6382976 0.9574468 0.7021273 0.8085106 0.8936167 0.8085107 0 0.8723405 0 0.6808509 0.9148932 0.680851 0 0.7446808 0 0.3191488 0 0.3404254 0 0.3191488 0.8936167 0.3404254 0 0.3404254 0.9148933 0.3191488 0.8936167 0 0.9148933 0 0 0.02127653 0.8936167 0 0 0.02127665 0 0.02127653 0.8936167 0 0.9148933 0.02127653 0.8936167 0.3191488 0.8936167 0.8085106 0 0.8085105 0.9148932 0.7446808 0.9148932</float_array>
+          <technique_common>
+            <accessor source="#futra_70-mesh-map-0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="futra_70-mesh-vertices">
+          <input semantic="POSITION" source="#futra_70-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_001-material" count="28">
+          <input semantic="VERTEX" source="#futra_70-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#futra_70-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#futra_70-mesh-map-0" offset="2" set="1"/>
+          <p>11 0 0 12 0 1 10 0 2 15 1 3 1 1 4 14 1 5 3 2 6 0 2 7 1 2 8 13 3 9 11 3 10 2 3 11 2 4 12 4 4 13 0 4 14 7 4 15 8 4 16 6 4 17 5 5 18 6 5 19 4 5 20 13 5 21 14 5 22 12 5 23 10 6 24 12 6 25 4 6 26 9 2 27 10 2 28 8 2 29 11 0 30 13 0 31 12 0 32 15 1 33 3 1 34 1 1 35 3 2 36 2 2 37 0 2 38 11 3 39 9 3 40 5 3 41 9 3 42 7 3 43 5 3 44 3 3 45 15 3 46 2 3 47 15 3 48 13 3 49 2 3 50 11 7 51 5 7 52 2 7 53 2 4 54 5 4 55 4 4 56 7 4 57 9 4 58 8 4 59 5 5 60 7 5 61 6 5 62 13 5 63 15 5 64 14 5 65 6 6 66 8 6 67 4 6 68 8 6 69 10 6 70 4 6 71 12 6 72 14 6 73 0 6 74 14 6 75 1 6 76 0 6 77 12 8 78 0 8 79 4 8 80 9 2 81 11 2 82 10 2 83</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="futra_70" name="futra_70" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#futra_70-mesh" name="futra_70">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_001-material" target="#Material_001-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -11,7 +11,7 @@
                   texture_unit
                   {
                     texture MyImage.png
-                    scale 0.02 0.02
+                    scale 0.022222 0.047619
                   }
                 }
               }

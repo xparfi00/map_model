@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="dvere_90">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="dvere_90_collision">
+		<collision name="dvere_90_collision">
+		<geometry>
+			<mesh>
+				<uri>model://dvere_90/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="dvere_90">
+		<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://dvere_90/meshes/model.dae</uri>
+				
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://dvere_90/material/scripts</uri>
+			<uri> model://dvere_90/material/textures</uri>
+			<name>dvere_90/Diffuse</name>
+		</script>
+		</material>
+	</visual>
+</link>
+</model>
+</sdf>

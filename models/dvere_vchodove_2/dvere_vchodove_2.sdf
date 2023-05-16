@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+<model name="dvere_vchodove_2">
+	<pose>0 0 0 0 0 0</pose>
+	<static>true</static>
+	<link name="dvere_vchodove_2_collision">
+		<collision name="dvere_vchodove_2_collision">
+		<geometry>
+			<mesh>
+				<uri>model://dvere_vchodove_2/meshes/model.dae</uri>
+				<scale> 0.9 1 1 </scale>
+			</mesh>
+		</geometry>
+		</collision>
+	<visual name="dvere_vchodove_2_mesh">
+	<cast_shadows>false</cast_shadows>
+		<geometry>
+			<mesh>
+				<uri> model://dvere_vchodove_2/meshes/model.dae</uri>
+				<scale> 0.9 1 1 </scale>
+			</mesh>
+		</geometry>
+		<material>
+		<script>
+			<uri> model://dvere_vchodove_2/material/scripts</uri>
+			<uri> model://dvere_vchodove_2/material/textures</uri>
+			<name>dvere_vchodove_2/Diffuse</name>
+		</script>
+		</material>
+		
+	</visual>
+</link>
+</model>
+</sdf>
